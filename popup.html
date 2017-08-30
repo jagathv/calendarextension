@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito:700">
+  <head>
+    <title>Calendar.io Chrome Extension Popup</title>
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        font-size: 100%;
+        background-color: #33e5d7;
+        color: white;
+        text-align: center;
+        
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+     
+  </head>
+
+  <body>
+    <h1>Calendar.io</h1>
+    <p> Modify your event below </p>
+    Month <input id = "month"/>
+    Day <input id = "day"/>
+    Year <input id = "year"/>
+  </body>
+   <script src = "popup.js"></script>
+</html>
+

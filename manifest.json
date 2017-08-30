@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "My Cool Extension",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.2.1.min.js", "content.js", "compromise.min.js", "require.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "callogo.png",
+    "default_popup": "popup.html",
+    "default_title": "Add calendar event"
+
+  }
+}
